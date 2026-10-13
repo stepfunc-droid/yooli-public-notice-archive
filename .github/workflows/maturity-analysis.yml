@@ -43,4 +43,6 @@ jobs:
             exit 0
           fi
           git commit -m '生成借款到期时间统计'
+          git fetch origin maturity-analysis-2026-10-13
+          git rebase origin/maturity-analysis-2026-10-13
           git push origin HEAD:maturity-analysis-2026-10-13
