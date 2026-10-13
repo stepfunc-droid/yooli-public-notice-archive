@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "desktop_viewport": [
+    1280,
+    1000
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "horizontal_page_overflow": false,
+  "js_errors": [],
+  "filter_checks": {
+    "checked": [
+      {
+        "year": 2015,
+        "matched": 24,
+        "records": 9366,
+        "cents": 100464508828,
+        "unknown": 0
+      },
+      {
+        "year": 2016,
+        "matched": 94,
+        "records": 119827,
+        "cents": 224426953631,
+        "unknown": 0
+      },
+      {
+        "year": 2017,
+        "matched": 180,
+        "records": 319166,
+        "cents": 485326429014,
+        "unknown": 2
+      },
+      {
+        "year": 2018,
+        "matched": 67,
+        "records": 110132,
+        "cents": 144448394734,
+        "unknown": 0
+      },
+      {
+        "year": 2019,
+        "matched": 40,
+        "records": 62868,
+        "cents": 24727359166,
+        "unknown": 0
+      },
+      {
+        "year": 2020,
+        "matched": 1,
+        "records": 28,
+        "cents": 20778808,
+        "unknown": 0
+      }
+    ],
+    "specific": {
+      "matched": 1,
+      "records": 1000,
+      "cents": 249089908,
+      "unknown": 2
+    },
+    "empty": {
+      "matched": 0,
+      "records": 0,
+      "cents": 0,
+      "unknown": 0
+    },
+    "all": {
+      "matched": 295,
+      "records": 621387,
+      "cents": 979414424181,
+      "unknown": 2
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "earlier_attempt_errors": [
+    {
+      "batch": 277,
+      "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDYwMzk0MA==&mid=2654643062&idx=1&sn=4a60ad9933a297097a20a7fcff7dee15&chksm=bd8c4cbd8afbc5ab0f0ef10ae0235748e9dd251c7c265a82dbd298b7626d585b734c0feca82e&scene=21#wechat_redirect",
+      "error": "Response is not a complete Youli notice article: ",
+      "resolved": true
+    },
+    {
+      "batch": 253,
+      "url": "http://mp.weixin.qq.com/s?__biz=MjM5MDYwMzk0MA==&mid=2654641875&idx=1&sn=cbaae2d2cc6fd430172b94e366c693ba&chksm=bd8c71188afbf80e2d559ea89b2d42306d764727b4c1ff0ed6ba1555c0d1d30bb21aeab67cfb&scene=21#wechat_redirect",
+      "error": "Expected batch 253, got 254",
+      "resolved": true
+    }
+  ],
+  "resolution": "277 fetched successfully on retry; 253 fetched from the corrected recommendation in batch 254.",
+  "continuation_attempts": []
+}

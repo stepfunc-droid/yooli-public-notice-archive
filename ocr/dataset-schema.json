@@ -1,0 +1,41 @@
+{
+  "encoding": "UTF-8 with BOM",
+  "csv_columns": [
+    "批次",
+    "序号",
+    "姓名或企业名称",
+    "身份证号或统一社会信用编码",
+    "手机号码",
+    "逾期金额_元",
+    "借款开始日期",
+    "借款期限_月",
+    "数据截止日期",
+    "公示发布日期",
+    "金额_分",
+    "金额校验状态",
+    "需复核字段",
+    "原表未提供字段",
+    "原文链接",
+    "原图路径",
+    "图片序号",
+    "图片内行号",
+    "图像跨批共用",
+    "同批重复原图记录",
+    "金额原始识别文本"
+  ],
+  "amount_computation": "integer cents in 金额_分; never convert unknown to zero",
+  "publication_rows": "one output row per visible table data row; preserve repeated source image occurrences and label them",
+  "unique_persons": "not derivable reliably from masked identifiers",
+  "source_exceptions": {
+    "unreadable_amounts": {
+      "batch": 254,
+      "serials": [
+        298,
+        327
+      ]
+    },
+    "missing_term_column": 214,
+    "source_blank_names": 5,
+    "fully_masked_names": 1
+  }
+}

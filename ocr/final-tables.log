@@ -1,0 +1,2 @@
+{"stage": "export", "batches": 295, "rows": 621462, "invalid_amount_rows": 2, "sequence_issue_rows": 7, "review_rows": 8689, "page_issues": 0}
+{"batches": 295, "table_images": 18707, "raw_published_record_rows": 621462, "same_batch_repeated_image_rows": 75, "rows_excluding_repeated_images": 621387, "known_amount_rows": 621460, "unknown_source_amount_rows": 2, "all_readable_amounts_checked": true, "source_sequence_gap_count": 52, "nonempty_review_marker_rows": 8689, "source_blank_name_rows": 5, "source_missing_term_rows": 2000, "structural_verification_issues": []}

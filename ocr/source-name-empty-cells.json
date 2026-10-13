@@ -1,0 +1,92 @@
+[
+  {
+    "page": "691e57011950fd1e49c5ae3de6bdc800ecc20835543788cb693d8bc473d55a5a.json.gz",
+    "row": 2,
+    "source": "assets/691e57011950fd1e49c5ae3de6bdc800ecc20835543788cb693d8bc473d55a5a.png",
+    "bbox": [
+      37,
+      54
+    ],
+    "cols": [
+      40,
+      120
+    ],
+    "confirmed_value": "",
+    "reason": "Source name cell is blank; value retained as missing."
+  },
+  {
+    "page": "b555e9a08e7e62cd414cc5f9c4a27dd71037ba15aebccc7b1e6bf6444f48b48a.json.gz",
+    "row": 32,
+    "source": "assets/b555e9a08e7e62cd414cc5f9c4a27dd71037ba15aebccc7b1e6bf6444f48b48a.png",
+    "bbox": [
+      577,
+      594
+    ],
+    "cols": [
+      40,
+      117
+    ],
+    "confirmed_value": "",
+    "reason": "Source name cell is blank; value retained as missing."
+  },
+  {
+    "page": "f94905bcbdd3b55eef6e874b0613f3888945274d45972bb736ae187e7e8a228f.json.gz",
+    "row": 1,
+    "source": "assets/f94905bcbdd3b55eef6e874b0613f3888945274d45972bb736ae187e7e8a228f.png",
+    "bbox": [
+      19,
+      36
+    ],
+    "cols": [
+      40,
+      121
+    ],
+    "confirmed_value": "**",
+    "reason": "Source displays exactly two asterisks and no disclosed surname."
+  },
+  {
+    "page": "669996edf6fbe99ccd0d16ca7c5584313c46b66fef49a3d056b1eee7bb04f87f.json.gz",
+    "row": 41,
+    "source": "assets/669996edf6fbe99ccd0d16ca7c5584313c46b66fef49a3d056b1eee7bb04f87f.png",
+    "bbox": [
+      739,
+      756
+    ],
+    "cols": [
+      40,
+      115
+    ],
+    "confirmed_value": "",
+    "reason": "Source name cell is blank; value retained as missing."
+  },
+  {
+    "page": "e7744e14f61400d87258e219433f2b138521a32ddc303ee6811410fcdf8ff93e.json.gz",
+    "row": 29,
+    "source": "assets/e7744e14f61400d87258e219433f2b138521a32ddc303ee6811410fcdf8ff93e.png",
+    "bbox": [
+      552,
+      570
+    ],
+    "cols": [
+      40,
+      111
+    ],
+    "confirmed_value": "",
+    "reason": "Source name cell is blank; value retained as missing."
+  },
+  {
+    "page": "4c84be986bd3a33fa3d550b5cac565efc1398daa49c9164176c7ca2926332415.json.gz",
+    "row": 7,
+    "source": "assets/4c84be986bd3a33fa3d550b5cac565efc1398daa49c9164176c7ca2926332415.png",
+    "bbox": [
+      127,
+      144
+    ],
+    "cols": [
+      40,
+      120
+    ],
+    "confirmed_value": "",
+    "reason": "Source name cell is blank; value retained as missing."
+  }
+]

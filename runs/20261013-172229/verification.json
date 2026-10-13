@@ -1,0 +1,20 @@
+{
+  "expected_articles": 96,
+  "saved_articles": 96,
+  "complete_articles": 96,
+  "missing_batches": [],
+  "image_references": 4218,
+  "unique_images": 3936,
+  "unique_image_bytes": 540082483,
+  "archive_files": 8363,
+  "archive_bytes": 897878447,
+  "image_formats": {
+    "gif": 4,
+    "png": 3930,
+    "webp": 1,
+    "jpg": 1
+  },
+  "all_local_references_valid": true,
+  "sha256_verified": true,
+  "issues": []
+}

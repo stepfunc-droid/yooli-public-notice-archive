@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>有利网 · 借款年份逾期公示统计</title>
+<style>
+:root{--ink:#183332;--muted:#637574;--line:#dce5df;--paper:#f4f6f1;--teal:#087d68;--blue:#436cab;--gold:#a46724}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2a8eec;outline-offset:3px}header,main,footer{max-width:1280px;margin:auto;padding:0 34px}header{padding-top:38px;padding-bottom:28px}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:28px}.brand{font-weight:700;letter-spacing:2px;font-size:13px}.tag{font-size:12px;border:1px solid var(--line);border-radius:30px;padding:5px 12px;background:#fff}h1{font-size:36px;line-height:1.35;letter-spacing:-1px;margin:0 0 12px}p{margin:0}.subtitle{max-width:900px;color:var(--muted)}.header-links{display:flex;gap:22px;font-size:13px}.cards{display:grid;grid-template-columns:1.4fr 1.1fr .8fr;gap:16px;margin-bottom:24px}.card{border:1px solid var(--line);background:#fff;border-radius:16px;padding:25px}.card.primary{background:#163f38;color:#fff;border-color:#163f38}.label{font-size:13px;color:var(--muted)}.primary .label,.primary .small{color:#c5d9d1}.big{font-size:42px;line-height:1.2;letter-spacing:-1px;font-weight:650;margin:12px 0 10px;font-variant-numeric:tabular-nums}.unit{font-size:17px;font-weight:400;margin-left:6px;letter-spacing:0}.small{font-size:12px;color:var(--muted)}.callout{display:flex;gap:12px;align-items:flex-start;background:#f7eddb;border:1px solid #e8dbc5;border-radius:12px;padding:14px 18px;margin-bottom:26px;font-size:13px;color:#6e512b}.callout strong{white-space:nowrap}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:24px;padding:28px}.panel-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:22px}h2{font-size:21px;line-height:1.4;margin:0 0 5px}h3{font-size:16px;margin:0 0 8px}.pill{font-size:12px;padding:6px 12px;border-radius:25px;background:#e9f3ec;white-space:nowrap;color:#39684a}.legend{display:grid;grid-template-columns:70px 1fr 1fr;gap:28px;font-size:12px;color:var(--muted);margin-bottom:14px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}.dot.blue{background:var(--blue)}.dot.green{background:var(--teal)}.chart-row{display:grid;grid-template-columns:70px 1fr 1fr;gap:28px;align-items:center;margin:0 0 18px}.year-label{font-size:15px;font-weight:650}.bar-header{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:5px;font-variant-numeric:tabular-nums}.share{color:var(--muted);font-size:12px}.track{height:9px;border-radius:5px;background:#edf1f0;overflow:hidden}.fill{height:100%;border-radius:5px;background:var(--blue)}.fill.money{background:var(--teal)}.chart-foot{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}th{text-align:right;font-size:12px;font-weight:500;color:var(--muted);padding:12px 16px;background:#f5f7f4;border-bottom:1px solid var(--line);white-space:nowrap}th:first-child,td:first-child{text-align:left}td{padding:14px 16px;border-bottom:1px solid #e8eeea;text-align:right;white-space:nowrap}tfoot td{font-weight:650;border-bottom:0;background:#f5f7f4}tbody tr:hover{background:#f8fbf8}.download{display:inline-flex;border:1px solid var(--line);padding:7px 13px;border-radius:7px;font-size:13px;white-space:nowrap;background:#fff}.unknown{color:var(--gold)}.row-note{font-size:12px;color:var(--muted);margin-top:14px}.method{display:grid;grid-template-columns:1fr 1fr;gap:30px}.method p{font-size:13px;color:var(--muted);line-height:1.9}.method strong{color:var(--ink)}details summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;font-weight:650;font-size:19px}details summary::-webkit-details-marker{display:none}details summary:after{content:'＋';font-size:23px;color:var(--teal)}details[open] summary:after{content:'−'}.filters{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 16px;font-size:13px}.filters input,.filters select{border:1px solid var(--line);border-radius:7px;padding:8px 11px;background:#fff;color:var(--ink);max-width:100%}.filters label{display:flex;align-items:center;gap:8px}.filters .small{margin-left:auto}.batch-table{max-height:470px;overflow:auto}.batch-table thead th{position:sticky;top:0;z-index:1}.link-cell a+a{margin-left:12px}footer{padding-top:0;padding-bottom:34px;font-size:12px;color:var(--muted);display:flex;gap:20px;justify-content:space-between}.test-status{display:none}@media(max-width:760px){header,main,footer{padding-left:18px;padding-right:18px}header{padding-top:22px}.topline{align-items:flex-start;gap:12px;margin-bottom:22px}.header-links{gap:12px;flex-wrap:wrap;justify-content:flex-end}h1{font-size:27px}.cards{grid-template-columns:1fr}.card{padding:21px}.big{font-size:37px}.panel{padding:20px}.panel-head{flex-wrap:wrap}.legend,.chart-row{grid-template-columns:42px 1fr 1fr;gap:12px}.bar-header{display:block}.share{display:block}.method{grid-template-columns:1fr;gap:20px}.callout{display:block}.callout strong{display:block;margin-bottom:4px}th,td{padding:12px 10px}.filters .small{margin-left:0}footer{display:block}footer span{display:block;margin-top:8px}}@media print{body{background:white}.header-links,.download,details,.test-status{display:none}.panel,.card{break-inside:avoid}.cards{grid-template-columns:1.4fr 1.1fr .8fr}header,main,footer{max-width:none;padding-left:0;padding-right:0}.card.primary{background:white;color:var(--ink)}.primary .label,.primary .small{color:var(--muted)}}
+</style>
+</head>
+<body>
+<header>
+ <div class="topline"><div class="brand">有利网 / 公示数据统计</div><nav class="header-links" aria-label="归档导航"><a href="../tables/index.html">每批原表</a><a href="../index.html">原文归档 ↗</a></nav></div>
+ <h1>各借款年份的逾期公示金额与人次</h1>
+ <p class="subtitle">按借款开始日期归属年份，汇总第 1—295 批严重失信借款人公示。这里的年份表示借款发生年份；名单记录按公示人次计数。</p>
+</header>
+<main>
+ <section class="cards" aria-label="汇总指标">
+  <div class="card primary"><div class="label">已知逾期金额合计</div><div class="big"><span id="total-money"></span><span class="unit">亿元</span></div><div class="small" id="total-money-exact"></div></div>
+  <div class="card"><div class="label">名单中的逾期公示人次</div><div class="big"><span id="total-records"></span><span class="unit">人次</span></div><div class="small">已排除同批重复图片中的 75 条记录</div></div>
+  <div class="card"><div class="label">已归档公示</div><div class="big">295<span class="unit">批</span></div><div class="small" id="publication-range"></div></div>
+ </section>
+ <div class="callout"><strong>2 条金额未知</strong><span>第 254 批序号 298、327 的原图金额显示为 ########。两条记录计入人次，金额保持未知；上方合计仅包含可读金额。</span></div>
+ <section class="panel" aria-labelledby="distribution-title">
+  <div class="panel-head"><div><h2 id="distribution-title">按借款开始年份分布</h2><p class="small">分别比较每年的人次与已知金额；右侧百分比为该年占总计的比例。</p></div><span class="pill">借款年份 2015—2020</span></div>
+  <div class="legend"><span>年份</span><span><i class="dot blue"></i>逾期公示人次</span><span><i class="dot green"></i>已知逾期金额</span></div>
+  <div id="year-chart" role="img" aria-label="各借款年份的逾期公示人次与已知金额，精确数值见下方年度汇总表"></div>
+  <p class="chart-foot">人次和金额各自以最高年份归一化展示。少量记录的柱长可能很短；精确数值以汇总表为准。</p>
+ </section>
+ <section class="panel" aria-labelledby="year-table-title">
+  <div class="panel-head"><div><h2 id="year-table-title">年度汇总</h2><p class="small">金额以元列出，保留两位小数。统计按整数分求和。</p></div><a class="download" href="yearly-summary.csv" download>下载年度 CSV ↓</a></div>
+  <div class="table-wrap"><table id="year-table"><thead><tr><th scope="col">借款开始年份</th><th scope="col">逾期公示人次</th><th scope="col">人次占比</th><th scope="col">已知逾期金额（元）</th><th scope="col">金额占比</th><th scope="col">金额未知人次</th></tr></thead><tbody id="year-rows"></tbody><tfoot id="year-total"></tfoot></table></div>
+  <p class="row-note">包含 2015 年借款的记录；2020 年借款记录较少。每年人次仅覆盖这 295 批已公示名单。</p>
+ </section>
+ <details class="panel" id="batch-details"><summary>查看每批明细</summary>
+  <div class="filters"><label>借款年份 <select id="year-filter"><option value="all">全部年份</option></select></label><label>批次 <input id="batch-search" type="search" inputmode="numeric" placeholder="输入批次编号" aria-label="搜索批次编号"></label><a class="download" href="batch-summary.csv" download>每批汇总 CSV ↓</a><a class="download" href="batch-year-summary.csv" download>每批 × 年份 CSV ↓</a><span class="small" id="batch-count"></span></div>
+  <div class="batch-table"><table><thead><tr><th scope="col">批次</th><th scope="col">公示发布日期</th><th scope="col">逾期公示人次</th><th scope="col">已知逾期金额（元）</th><th scope="col">金额未知人次</th><th scope="col">查看原始表格</th></tr></thead><tbody id="batch-rows"></tbody><tfoot id="batch-total"></tfoot></table></div>
+ </details>
+ <section class="panel method" aria-label="统计口径与来源">
+  <div><h3>人数口径</h3><p>原始图表共有 <strong>621,462 条记录</strong>，排除同批重复图片中的 <strong>75 条</strong>，统计为 <strong>621,387 公示人次</strong>。姓名和证件号有掩码，跨批重复借款人无法可靠去重，因此不能将人次直接等同于独立人数。</p></div>
+  <div><h3>金额与归属年份</h3><p>金额为原表“逾期金额”，按“借款开始日期”分年。合计保留每条有效公示记录的金额，不代表某一日期去重后的债务余额。原文存在 <strong>52 个序号缺口</strong>，未补造缺失记录；未知金额未计为零。</p></div>
+  <div><h3>覆盖范围</h3><p id="coverage"></p></div>
+  <div><h3>来源与复核</h3><p>所有可读金额已有双引擎或原图核对结果，其他字段仍有复核标记。可查看<a href="../ocr/table-verification.json">原表校验报告</a>、<a href="verification.json">汇总校验记录</a>与<a href="summary.json">汇总 JSON</a>。本页不包含个人身份明细。</p></div>
+ </section>
+ <noscript><div class="callout">请启用 JavaScript 查看图表，或直接打开 <a href="yearly-summary.csv">年度统计 CSV</a>。</div></noscript>
+</main>
+<footer><span>有利网公示离线归档 · 统计基于第 1—295 批</span><span id="generated"></span></footer>
+<script id="summary-data" type="application/json">__SUMMARY_DATA__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('summary-data').textContent);
+const $=id=>document.getElementById(id);
+const count=n=>n.toLocaleString('zh-CN');
+function money(c){const b=BigInt(c),whole=b/100n,fraction=(b%100n).toString().padStart(2,'0');return whole.toLocaleString('zh-CN')+'.'+fraction;}
+const yi=c=>(c/1e10).toFixed(2);
+const compactMoney=c=>c<1e8?(c/1e6).toFixed(2)+' 万元':yi(c)+' 亿元';
+const pct=(n,t)=>!t?'—':n>0&&n/t*100<0.01?'&lt;0.01%':(n/t*100).toFixed(2)+'%';
+$('total-money').textContent=yi(DATA.total.known_amount_cents);
+$('total-money-exact').textContent=money(DATA.total.known_amount_cents)+' 元 · 另有 2 条未知金额';
+$('total-records').textContent=count(DATA.total.records);
+$('publication-range').textContent=DATA.publication_date_range[0]+' — '+DATA.publication_date_range[1];
+$('coverage').textContent='借款开始年份覆盖 2015—2020 年，公示发布日期覆盖 '+DATA.publication_date_range[0]+' 至 '+DATA.publication_date_range[1]+'。统计反映归档名单中各借款年份的逾期记录，不能据此计算全年所有借款人的违约率。';
+$('generated').textContent='汇总生成于 '+DATA.generated_at.slice(0,10);
+const maxRecords=Math.max(...DATA.loan_years.map(x=>x.records));
+const maxMoney=Math.max(...DATA.loan_years.map(x=>x.known_amount_cents));
+$('year-chart').innerHTML=DATA.loan_years.map(x=>`<div class="chart-row"><span class="year-label">${x.year}</span><div><div class="bar-header"><span>${count(x.records)} 人次</span><span class="share">${pct(x.records,DATA.total.records)}</span></div><div class="track"><div class="fill" style="width:${x.records/maxRecords*100}%"></div></div></div><div><div class="bar-header"><span>${compactMoney(x.known_amount_cents)}</span><span class="share">${pct(x.known_amount_cents,DATA.total.known_amount_cents)}</span></div><div class="track"><div class="fill money" style="width:${x.known_amount_cents/maxMoney*100}%"></div></div></div></div>`).join('');
+$('year-rows').innerHTML=DATA.loan_years.map(x=>`<tr><td>${x.year}</td><td>${count(x.records)}</td><td>${pct(x.records,DATA.total.records)}</td><td>${money(x.known_amount_cents)}</td><td>${pct(x.known_amount_cents,DATA.total.known_amount_cents)}</td><td${x.unknown_amount_records?' class="unknown"':''}>${x.unknown_amount_records}</td></tr>`).join('');
+$('year-total').innerHTML=`<tr><td>合计</td><td>${count(DATA.total.records)}</td><td>100.00%</td><td>${money(DATA.total.known_amount_cents)}</td><td>100.00%</td><td class="unknown">${DATA.total.unknown_amount_records}</td></tr>`;
+for(const x of DATA.loan_years){const o=document.createElement('option');o.value=String(x.year);o.textContent=String(x.year);$('year-filter').appendChild(o);}
+function renderBatches(){
+ const year=$('year-filter').value,search=$('batch-search').value.trim();let records=0,cents=0,unknown=0,matched=0;
+ $('batch-rows').innerHTML=DATA.batches.map(b=>{
+  const v=year==='all'?b:b.loan_years[year];
+  if(!v||search&&!String(b.batch).includes(search))return '';
+  records+=v.records;cents+=v.known_amount_cents;unknown+=v.unknown_amount_records;matched++;
+  const file='batch-'+String(b.batch).padStart(4,'0');
+  return `<tr><td>第 ${b.batch} 批</td><td>${b.publication_date}</td><td>${count(v.records)}</td><td>${money(v.known_amount_cents)}</td><td${v.unknown_amount_records?' class="unknown"':''}>${v.unknown_amount_records}</td><td class="link-cell"><a href="../tables/${file}.html">原表</a><a href="../${file}/index.html">原文</a></td></tr>`;
+ }).join('')||( '<tr><td colspan="6">没有符合条件的公示批次。</td></tr>');
+ $('batch-count').textContent=matched+' 批 · '+count(records)+' 人次';
+ $('batch-total').innerHTML=`<tr><td>当前筛选合计</td><td></td><td>${count(records)}</td><td>${money(cents)}</td><td>${unknown}</td><td></td></tr>`;
+ return {matched,records,cents,unknown};
+}
+$('year-filter').addEventListener('change',renderBatches);
+$('batch-search').addEventListener('input',renderBatches);
+renderBatches();
+window.yooliStats={data:DATA,renderBatches,money};
+</script>
+</body>
+</html>
