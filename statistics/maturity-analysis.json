@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T23:38:26+08:00",
+  "generated_at": "2026-10-13T23:39:25+08:00",
   "method": {
     "maturity_date": "借款开始日期 + 借款期限（月），按自然月相加；若目标月份无对应日则取该月最后一日",
     "same_batch_duplicates": "排除 同批重复原图记录=True 的记录，与现有 statistics/summary.json 口径一致",
