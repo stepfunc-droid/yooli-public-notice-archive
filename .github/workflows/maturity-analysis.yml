@@ -25,7 +25,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: maturity-analysis-2026-10-13
-          fetch-depth: 0
+          fetch-depth: 1
+          sparse-checkout: |
+            tables
+            statistics
+          sparse-checkout-cone-mode: true
       - name: Build maturity statistics
         run: python3 statistics/scripts/analyze_maturity.py --root .
       - name: Commit generated outputs
