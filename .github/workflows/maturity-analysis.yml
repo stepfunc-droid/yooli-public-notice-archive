@@ -7,6 +7,12 @@ on:
     paths:
       - 'statistics/scripts/analyze_maturity.py'
       - '.github/workflows/maturity-analysis.yml'
+  pull_request:
+    branches:
+      - master
+    paths:
+      - 'statistics/scripts/analyze_maturity.py'
+      - '.github/workflows/maturity-analysis.yml'
   workflow_dispatch:
 
 permissions:
