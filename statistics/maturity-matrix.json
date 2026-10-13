@@ -1,0 +1,598 @@
+{
+  "generated_at": "2026-10-13T23:56:43+08:00",
+  "method": {
+    "scope": "排除同批重复原图记录；仅统计可计算最终合同到期日的记录",
+    "maturity_date": "借款开始日期 + 借款期限（月）；目标月无对应日则取月末",
+    "main_cutoff": "2019-10-31",
+    "early_cutoff": "2018-12-31",
+    "strict_fingerprint_sensitivity": "掩码姓名+掩码身份证/统一信用代码+掩码手机号+借款开始日期+借款期限+金额；跨批只保留单一批次最大出现次数，并在并列时选择最早公示批次"
+  },
+  "source": {
+    "all_records_after_same_batch_filter": {
+      "records": 621387,
+      "known_amount_cents": 979414424181,
+      "unknown_amount_records": 2
+    },
+    "parse_failures": {
+      "records": 2000,
+      "known_amount_cents": 567129208,
+      "unknown_amount_records": 0
+    },
+    "parse_failure_batches": {
+      "214": 2000
+    },
+    "parseable_records": 619387
+  },
+  "raw_publication_person_time_view": {
+    "matured_by_2019_10_31": {
+      "records": 481434,
+      "known_amount_cents": 626569756305,
+      "unknown_amount_records": 2
+    },
+    "matured_by_2018_12_31": {
+      "records": 301479,
+      "known_amount_cents": 257891287251,
+      "unknown_amount_records": 0
+    },
+    "matured_by_2019_10_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 284,
+        "known_amount_cents": 116505709,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 93911,
+        "known_amount_cents": 111369005677,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 211109,
+        "known_amount_cents": 428180165599,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 103639,
+        "known_amount_cents": 63471072597,
+        "unknown_amount_records": 2
+      },
+      {
+        "publication_year": 2024,
+        "records": 72491,
+        "known_amount_cents": 23433006723,
+        "unknown_amount_records": 0
+      }
+    ],
+    "matured_by_2018_12_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 36,
+        "known_amount_cents": 26572136,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 16632,
+        "known_amount_cents": 9049190579,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 139386,
+        "known_amount_cents": 183519471662,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 86794,
+        "known_amount_cents": 49568549490,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2024,
+        "records": 58631,
+        "known_amount_cents": 15727503384,
+        "unknown_amount_records": 0
+      }
+    ],
+    "by_maturity_year_publication_year": [
+      {
+        "maturity_year": 2015,
+        "publication_year": 2023,
+        "records": 1,
+        "known_amount_cents": 1157775,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2016,
+        "publication_year": 2022,
+        "records": 751,
+        "known_amount_cents": 6268295201,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2016,
+        "publication_year": 2023,
+        "records": 646,
+        "known_amount_cents": 3989061636,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2016,
+        "publication_year": 2024,
+        "records": 507,
+        "known_amount_cents": 106078492,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2017,
+        "publication_year": 2022,
+        "records": 18453,
+        "known_amount_cents": 52761007187,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2017,
+        "publication_year": 2023,
+        "records": 22743,
+        "known_amount_cents": 22491833362,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2017,
+        "publication_year": 2024,
+        "records": 18277,
+        "known_amount_cents": 4755422335,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2018,
+        "publication_year": 2020,
+        "records": 36,
+        "known_amount_cents": 26572136,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2018,
+        "publication_year": 2021,
+        "records": 16632,
+        "known_amount_cents": 9049190579,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2018,
+        "publication_year": 2022,
+        "records": 120182,
+        "known_amount_cents": 124490169274,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2018,
+        "publication_year": 2023,
+        "records": 63404,
+        "known_amount_cents": 23086496717,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2018,
+        "publication_year": 2024,
+        "records": 39847,
+        "known_amount_cents": 10866002557,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2019,
+        "publication_year": 2020,
+        "records": 248,
+        "known_amount_cents": 89933573,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2019,
+        "publication_year": 2021,
+        "records": 77279,
+        "known_amount_cents": 102319815098,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2019,
+        "publication_year": 2022,
+        "records": 71723,
+        "known_amount_cents": 244660693937,
+        "unknown_amount_records": 0
+      },
+      {
+        "maturity_year": 2019,
+        "publication_year": 2023,
+        "records": 16845,
+        "known_amount_cents": 13902523107,
+        "unknown_amount_records": 2
+      },
+      {
+        "maturity_year": 2019,
+        "publication_year": 2024,
+        "records": 13860,
+        "known_amount_cents": 7705503339,
+        "unknown_amount_records": 0
+      }
+    ],
+    "by_term_publication_year": [
+      {
+        "term_months": 1,
+        "publication_year": 2022,
+        "records": 1,
+        "known_amount_cents": 101680,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 2,
+        "publication_year": 2020,
+        "records": 5,
+        "known_amount_cents": 2598003,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 3,
+        "publication_year": 2020,
+        "records": 20,
+        "known_amount_cents": 17640303,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 3,
+        "publication_year": 2021,
+        "records": 9,
+        "known_amount_cents": 2484484,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 3,
+        "publication_year": 2023,
+        "records": 1,
+        "known_amount_cents": 1157775,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 6,
+        "publication_year": 2020,
+        "records": 259,
+        "known_amount_cents": 96267403,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 6,
+        "publication_year": 2021,
+        "records": 3881,
+        "known_amount_cents": 1446951107,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 6,
+        "publication_year": 2022,
+        "records": 8509,
+        "known_amount_cents": 2006919776,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 6,
+        "publication_year": 2023,
+        "records": 4872,
+        "known_amount_cents": 1114962178,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 6,
+        "publication_year": 2024,
+        "records": 3794,
+        "known_amount_cents": 782805210,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 8,
+        "publication_year": 2021,
+        "records": 195,
+        "known_amount_cents": 34872186,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 8,
+        "publication_year": 2022,
+        "records": 71,
+        "known_amount_cents": 14494714,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 8,
+        "publication_year": 2023,
+        "records": 11,
+        "known_amount_cents": 2050760,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 8,
+        "publication_year": 2024,
+        "records": 16,
+        "known_amount_cents": 2978148,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 9,
+        "publication_year": 2021,
+        "records": 6122,
+        "known_amount_cents": 1675446461,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 9,
+        "publication_year": 2022,
+        "records": 8481,
+        "known_amount_cents": 2129635150,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 9,
+        "publication_year": 2023,
+        "records": 4675,
+        "known_amount_cents": 1097418584,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 9,
+        "publication_year": 2024,
+        "records": 3651,
+        "known_amount_cents": 876849160,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 10,
+        "publication_year": 2021,
+        "records": 1422,
+        "known_amount_cents": 268295730,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 10,
+        "publication_year": 2022,
+        "records": 3901,
+        "known_amount_cents": 779318934,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 10,
+        "publication_year": 2023,
+        "records": 2601,
+        "known_amount_cents": 518880553,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 10,
+        "publication_year": 2024,
+        "records": 1920,
+        "known_amount_cents": 376174697,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 12,
+        "publication_year": 2021,
+        "records": 52090,
+        "known_amount_cents": 22069372825,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 12,
+        "publication_year": 2022,
+        "records": 67055,
+        "known_amount_cents": 36090208958,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 12,
+        "publication_year": 2023,
+        "records": 33610,
+        "known_amount_cents": 12408057515,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 12,
+        "publication_year": 2024,
+        "records": 24459,
+        "known_amount_cents": 6543867556,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 15,
+        "publication_year": 2021,
+        "records": 8824,
+        "known_amount_cents": 3122816536,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 15,
+        "publication_year": 2022,
+        "records": 13014,
+        "known_amount_cents": 4432504371,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 15,
+        "publication_year": 2023,
+        "records": 6711,
+        "known_amount_cents": 2013918074,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 15,
+        "publication_year": 2024,
+        "records": 4327,
+        "known_amount_cents": 1453734180,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 18,
+        "publication_year": 2021,
+        "records": 11030,
+        "known_amount_cents": 8150004577,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 18,
+        "publication_year": 2022,
+        "records": 50942,
+        "known_amount_cents": 51456706037,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 18,
+        "publication_year": 2023,
+        "records": 32673,
+        "known_amount_cents": 17244709439,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 18,
+        "publication_year": 2024,
+        "records": 23705,
+        "known_amount_cents": 7619548209,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 24,
+        "publication_year": 2021,
+        "records": 10338,
+        "known_amount_cents": 74598761771,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 24,
+        "publication_year": 2022,
+        "records": 48743,
+        "known_amount_cents": 218258632932,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 24,
+        "publication_year": 2023,
+        "records": 17467,
+        "known_amount_cents": 17725383356,
+        "unknown_amount_records": 2
+      },
+      {
+        "term_months": 24,
+        "publication_year": 2024,
+        "records": 10619,
+        "known_amount_cents": 5777049563,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 36,
+        "publication_year": 2022,
+        "records": 9547,
+        "known_amount_cents": 103248709930,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 36,
+        "publication_year": 2023,
+        "records": 542,
+        "known_amount_cents": 6071088308,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 48,
+        "publication_year": 2022,
+        "records": 845,
+        "known_amount_cents": 9762933117,
+        "unknown_amount_records": 0
+      },
+      {
+        "term_months": 48,
+        "publication_year": 2023,
+        "records": 476,
+        "known_amount_cents": 5273446055,
+        "unknown_amount_records": 0
+      }
+    ]
+  },
+  "conservative_strict_fingerprint_view": {
+    "matured_by_2019_10_31": {
+      "records": 441695,
+      "known_amount_cents": 611315500756,
+      "unknown_amount_records": 2
+    },
+    "matured_by_2018_12_31": {
+      "records": 274445,
+      "known_amount_cents": 250326409181,
+      "unknown_amount_records": 0
+    },
+    "matured_by_2019_10_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 284,
+        "known_amount_cents": 116505709,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 93730,
+        "known_amount_cents": 109967883093,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 208079,
+        "known_amount_cents": 427307801228,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 101638,
+        "known_amount_cents": 62945538379,
+        "unknown_amount_records": 2
+      },
+      {
+        "publication_year": 2024,
+        "records": 37964,
+        "known_amount_cents": 10977772347,
+        "unknown_amount_records": 0
+      }
+    ],
+    "matured_by_2018_12_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 36,
+        "known_amount_cents": 26572136,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 16575,
+        "known_amount_cents": 8692002614,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 137062,
+        "known_amount_cents": 182914576544,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 84793,
+        "known_amount_cents": 49043015272,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2024,
+        "records": 35979,
+        "known_amount_cents": 9650242615,
+        "unknown_amount_records": 0
+      }
+    ],
+    "repeated_multi_batch_keys": 41543,
+    "removed_cross_batch_occurrences": 41546,
+    "removed_known_amount_cents": 19521599585
+  }
+}
