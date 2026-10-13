@@ -1,15 +1,10 @@
 {
-  "generated_at": "2026-10-13T23:39:25+08:00",
+  "generated_at": "2026-10-13T23:44:31+08:00",
   "method": {
-    "maturity_date": "借款开始日期 + 借款期限（月），按自然月相加；若目标月份无对应日则取该月最后一日",
-    "same_batch_duplicates": "排除 同批重复原图记录=True 的记录，与现有 statistics/summary.json 口径一致",
-    "high_confidence": "需复核字段/原表未提供字段未标记借款开始日期或借款期限",
-    "strict_fingerprint": "姓名或企业名称(掩码)+身份证/统一信用代码(掩码)+手机号(掩码)+借款开始日期+借款期限+金额；仅用于跨批重复敏感性分析，不等于唯一借款人/唯一债权ID"
-  },
-  "cutoffs": {
-    "2019-10-31": "2019-10-31",
-    "2019-12-31": "2019-12-31",
-    "2020-06-30": "2020-06-30"
+    "maturity_date": "借款开始日期 + 借款期限（月），按自然月相加；目标月份无对应日时取月末",
+    "same_batch_duplicates": "排除 同批重复原图记录=True，与现有 statistics/summary.json 一致",
+    "strict_fingerprint": "掩码姓名+掩码身份证/统一信用代码+掩码手机号+借款开始日期+借款期限+金额；仅做跨批重复敏感性分析",
+    "conservative_cross_batch_dedup": "每个严格指纹保留任一单批最大出现次数，仅移除跨批额外出现部分；不宣称得到唯一债权数"
   },
   "source": {
     "batch_count": 295,
@@ -18,158 +13,202 @@
       "known_amount_cents": 979414424181,
       "unknown_amount_records": 2
     },
-    "parse_failure_count": 2000,
-    "low_confidence_maturity_fields_count": 0,
+    "maturity_parse_failures": {
+      "records": 2000,
+      "known_amount_cents": 567129208,
+      "unknown_amount_records": 0
+    },
+    "parse_failure_by_batch": [
+      {
+        "batch": 214,
+        "records": 2000,
+        "known_amount_cents": 567129208,
+        "unknown_amount_records": 0
+      }
+    ],
     "parse_failure_examples": [
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "1",
         "loan_start": "2016-12-15",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "2",
         "loan_start": "2016-12-22",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "3",
         "loan_start": "2016-12-15",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "4",
         "loan_start": "2016-12-08",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "5",
         "loan_start": "2016-12-31",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "6",
         "loan_start": "2016-12-26",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "7",
         "loan_start": "2016-12-20",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "8",
         "loan_start": "2016-12-22",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "9",
         "loan_start": "2016-12-08",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "10",
         "loan_start": "2016-12-21",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "11",
         "loan_start": "2016-12-08",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "12",
         "loan_start": "2016-12-20",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "13",
         "loan_start": "2016-12-29",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "14",
         "loan_start": "2016-12-19",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "15",
         "loan_start": "2016-12-09",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "16",
         "loan_start": "2016-12-07",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "17",
         "loan_start": "2016-12-21",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "18",
         "loan_start": "2016-12-20",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "19",
         "loan_start": "2016-12-19",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       },
       {
-        "batch": "214",
+        "batch": 214,
         "serial": "20",
         "loan_start": "2016-12-22",
         "term_months": "",
+        "missing_fields": "借款期限",
         "error": "invalid literal for int() with base 10: ''"
       }
-    ]
+    ],
+    "parseable_records": {
+      "records": 619387,
+      "known_amount_cents": 978847294973,
+      "unknown_amount_records": 2
+    },
+    "low_confidence_parseable_records": 0
   },
-  "all_records_view": {
+  "all_parseable_records_view": {
     "total": {
       "records": 619387,
       "known_amount_cents": 978847294973,
       "unknown_amount_records": 2
     },
     "matured_by_cutoff": {
+      "2018-12-31": {
+        "records": 301479,
+        "known_amount_cents": 257891287251,
+        "unknown_amount_records": 0,
+        "record_pct_of_total": 48.6738,
+        "known_amount_pct_of_total": 26.3464
+      },
       "2019-10-31": {
         "records": 481434,
         "known_amount_cents": 626569756305,
@@ -381,6 +420,38 @@
         "term_months": 48,
         "records": 1321,
         "known_amount_cents": 15036379172,
+        "unknown_amount_records": 0
+      }
+    ],
+    "matured_by_2019_10_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 284,
+        "known_amount_cents": 116505709,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 93911,
+        "known_amount_cents": 111369005677,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 211109,
+        "known_amount_cents": 428180165599,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 103639,
+        "known_amount_cents": 63471072597,
+        "unknown_amount_records": 2
+      },
+      {
+        "publication_year": 2024,
+        "records": 72491,
+        "known_amount_cents": 23433006723,
         "unknown_amount_records": 0
       }
     ]
@@ -392,6 +463,13 @@
       "unknown_amount_records": 2
     },
     "matured_by_cutoff": {
+      "2018-12-31": {
+        "records": 301479,
+        "known_amount_cents": 257891287251,
+        "unknown_amount_records": 0,
+        "record_pct_of_total": 48.6738,
+        "known_amount_pct_of_total": 26.3464
+      },
       "2019-10-31": {
         "records": 481434,
         "known_amount_cents": 626569756305,
@@ -605,77 +683,116 @@
         "known_amount_cents": 15036379172,
         "unknown_amount_records": 0
       }
+    ],
+    "matured_by_2019_10_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 284,
+        "known_amount_cents": 116505709,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 93911,
+        "known_amount_cents": 111369005677,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 211109,
+        "known_amount_cents": 428180165599,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 103639,
+        "known_amount_cents": 63471072597,
+        "unknown_amount_records": 2
+      },
+      {
+        "publication_year": 2024,
+        "records": 72491,
+        "known_amount_cents": 23433006723,
+        "unknown_amount_records": 0
+      }
     ]
   },
-  "strict_fingerprint_dedup_view": {
+  "conservative_strict_fingerprint_view": {
     "total": {
-      "records": 576836,
-      "known_amount_cents": 958905108957,
+      "records": 577841,
+      "known_amount_cents": 959325695388,
       "unknown_amount_records": 2
     },
     "matured_by_cutoff": {
+      "2018-12-31": {
+        "records": 274445,
+        "known_amount_cents": 250326409181,
+        "unknown_amount_records": 0,
+        "record_pct_of_total": 47.4949,
+        "known_amount_pct_of_total": 26.094
+      },
       "2019-10-31": {
-        "records": 440690,
-        "known_amount_cents": 610894914325,
+        "records": 441695,
+        "known_amount_cents": 611315500756,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 76.3978,
-        "known_amount_pct_of_total": 63.7075
+        "record_pct_of_total": 76.4388,
+        "known_amount_pct_of_total": 63.7235
       },
       "2019-12-31": {
-        "records": 467248,
-        "known_amount_cents": 672367702337,
+        "records": 468253,
+        "known_amount_cents": 672788288768,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 81.0019,
-        "known_amount_pct_of_total": 70.1183
+        "record_pct_of_total": 81.0349,
+        "known_amount_pct_of_total": 70.1314
       },
       "2020-06-30": {
-        "records": 532305,
-        "known_amount_cents": 789428639473,
+        "records": 533310,
+        "known_amount_cents": 789849225904,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 92.2801,
-        "known_amount_pct_of_total": 82.326
+        "record_pct_of_total": 92.2936,
+        "known_amount_pct_of_total": 82.3338
       }
     },
     "maturity_buckets": [
       {
         "bucket": "matured_by_2018_12_31",
-        "records": 273680,
-        "known_amount_cents": 250056806553,
+        "records": 274445,
+        "known_amount_cents": 250326409181,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 47.445,
-        "known_amount_pct_of_total": 26.0773
+        "record_pct_of_total": 47.4949,
+        "known_amount_pct_of_total": 26.094
       },
       {
         "bucket": "matured_2019_01_01_to_2019_10_31",
-        "records": 167010,
-        "known_amount_cents": 360838107772,
+        "records": 167250,
+        "known_amount_cents": 360989091575,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 28.9528,
-        "known_amount_pct_of_total": 37.6302
+        "record_pct_of_total": 28.9439,
+        "known_amount_pct_of_total": 37.6295
       },
       {
         "bucket": "matured_2019_11_01_to_2019_12_31",
         "records": 26558,
         "known_amount_cents": 61472788012,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 4.6041,
-        "known_amount_pct_of_total": 6.4107
+        "record_pct_of_total": 4.5961,
+        "known_amount_pct_of_total": 6.4079
       },
       {
         "bucket": "matured_2020_01_01_to_2020_06_30",
         "records": 65057,
         "known_amount_cents": 117060937136,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 11.2782,
-        "known_amount_pct_of_total": 12.2078
+        "record_pct_of_total": 11.2586,
+        "known_amount_pct_of_total": 12.2024
       },
       {
         "bucket": "matured_after_2020_06_30",
         "records": 44531,
         "known_amount_cents": 169476469484,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 7.7199,
-        "known_amount_pct_of_total": 17.674
+        "record_pct_of_total": 7.7064,
+        "known_amount_pct_of_total": 17.6662
       }
     ],
     "by_start_year": [
@@ -687,20 +804,20 @@
       },
       {
         "year": 2016,
-        "records": 115822,
-        "known_amount_cents": 223311214903,
+        "records": 115824,
+        "known_amount_cents": 223334377213,
         "unknown_amount_records": 0
       },
       {
         "year": 2017,
-        "records": 278630,
-        "known_amount_cents": 465935557897,
+        "records": 279632,
+        "known_amount_cents": 466332669268,
         "unknown_amount_records": 2
       },
       {
         "year": 2018,
-        "records": 110126,
-        "known_amount_cents": 144445960006,
+        "records": 110127,
+        "known_amount_cents": 144446272756,
         "unknown_amount_records": 0
       },
       {
@@ -725,20 +842,20 @@
       },
       {
         "year": 2016,
-        "records": 113119,
-        "known_amount_cents": 194813771976,
+        "records": 113121,
+        "known_amount_cents": 194836934286,
         "unknown_amount_records": 0
       },
       {
         "year": 2017,
-        "records": 249848,
-        "known_amount_cents": 286730086145,
+        "records": 250850,
+        "known_amount_cents": 287127197516,
         "unknown_amount_records": 2
       },
       {
         "year": 2018,
-        "records": 67697,
-        "known_amount_cents": 28577139860,
+        "records": 67698,
+        "known_amount_cents": 28577452610,
         "unknown_amount_records": 0
       },
       {
@@ -757,8 +874,8 @@
       },
       {
         "term_months": 2,
-        "records": 4,
-        "known_amount_cents": 2357413,
+        "records": 5,
+        "known_amount_cents": 2598003,
         "unknown_amount_records": 0
       },
       {
@@ -769,8 +886,8 @@
       },
       {
         "term_months": 6,
-        "records": 19226,
-        "known_amount_cents": 5005044120,
+        "records": 19332,
+        "known_amount_cents": 5027837057,
         "unknown_amount_records": 0
       },
       {
@@ -781,38 +898,38 @@
       },
       {
         "term_months": 9,
-        "records": 20815,
-        "known_amount_cents": 5256754366,
+        "records": 20855,
+        "known_amount_cents": 5267254795,
         "unknown_amount_records": 0
       },
       {
         "term_months": 10,
-        "records": 8949,
-        "known_amount_cents": 1766472177,
+        "records": 8961,
+        "known_amount_cents": 1768867617,
         "unknown_amount_records": 0
       },
       {
         "term_months": 12,
-        "records": 160679,
-        "known_amount_cents": 72332228015,
+        "records": 160938,
+        "known_amount_cents": 72407834798,
         "unknown_amount_records": 0
       },
       {
         "term_months": 15,
-        "records": 29731,
-        "known_amount_cents": 9976297031,
+        "records": 29780,
+        "known_amount_cents": 9992068318,
         "unknown_amount_records": 0
       },
       {
         "term_months": 18,
-        "records": 109102,
-        "known_amount_cents": 80788782453,
+        "records": 109398,
+        "known_amount_cents": 80907915305,
         "unknown_amount_records": 0
       },
       {
         "term_months": 24,
-        "records": 80468,
-        "known_amount_cents": 311338181195,
+        "records": 80710,
+        "known_amount_cents": 311512327308,
         "unknown_amount_records": 2
       },
       {
@@ -827,77 +944,116 @@
         "known_amount_cents": 15036379172,
         "unknown_amount_records": 0
       }
+    ],
+    "matured_by_2019_10_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 284,
+        "known_amount_cents": 116505709,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 93730,
+        "known_amount_cents": 109967883093,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 208079,
+        "known_amount_cents": 427307801228,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 101638,
+        "known_amount_cents": 62945538379,
+        "unknown_amount_records": 2
+      },
+      {
+        "publication_year": 2024,
+        "records": 37964,
+        "known_amount_cents": 10977772347,
+        "unknown_amount_records": 0
+      }
     ]
   },
-  "strict_fingerprint_high_confidence_view": {
+  "conservative_strict_fingerprint_high_confidence_view": {
     "total": {
-      "records": 576836,
-      "known_amount_cents": 958905108957,
+      "records": 577841,
+      "known_amount_cents": 959325695388,
       "unknown_amount_records": 2
     },
     "matured_by_cutoff": {
+      "2018-12-31": {
+        "records": 274445,
+        "known_amount_cents": 250326409181,
+        "unknown_amount_records": 0,
+        "record_pct_of_total": 47.4949,
+        "known_amount_pct_of_total": 26.094
+      },
       "2019-10-31": {
-        "records": 440690,
-        "known_amount_cents": 610894914325,
+        "records": 441695,
+        "known_amount_cents": 611315500756,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 76.3978,
-        "known_amount_pct_of_total": 63.7075
+        "record_pct_of_total": 76.4388,
+        "known_amount_pct_of_total": 63.7235
       },
       "2019-12-31": {
-        "records": 467248,
-        "known_amount_cents": 672367702337,
+        "records": 468253,
+        "known_amount_cents": 672788288768,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 81.0019,
-        "known_amount_pct_of_total": 70.1183
+        "record_pct_of_total": 81.0349,
+        "known_amount_pct_of_total": 70.1314
       },
       "2020-06-30": {
-        "records": 532305,
-        "known_amount_cents": 789428639473,
+        "records": 533310,
+        "known_amount_cents": 789849225904,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 92.2801,
-        "known_amount_pct_of_total": 82.326
+        "record_pct_of_total": 92.2936,
+        "known_amount_pct_of_total": 82.3338
       }
     },
     "maturity_buckets": [
       {
         "bucket": "matured_by_2018_12_31",
-        "records": 273680,
-        "known_amount_cents": 250056806553,
+        "records": 274445,
+        "known_amount_cents": 250326409181,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 47.445,
-        "known_amount_pct_of_total": 26.0773
+        "record_pct_of_total": 47.4949,
+        "known_amount_pct_of_total": 26.094
       },
       {
         "bucket": "matured_2019_01_01_to_2019_10_31",
-        "records": 167010,
-        "known_amount_cents": 360838107772,
+        "records": 167250,
+        "known_amount_cents": 360989091575,
         "unknown_amount_records": 2,
-        "record_pct_of_total": 28.9528,
-        "known_amount_pct_of_total": 37.6302
+        "record_pct_of_total": 28.9439,
+        "known_amount_pct_of_total": 37.6295
       },
       {
         "bucket": "matured_2019_11_01_to_2019_12_31",
         "records": 26558,
         "known_amount_cents": 61472788012,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 4.6041,
-        "known_amount_pct_of_total": 6.4107
+        "record_pct_of_total": 4.5961,
+        "known_amount_pct_of_total": 6.4079
       },
       {
         "bucket": "matured_2020_01_01_to_2020_06_30",
         "records": 65057,
         "known_amount_cents": 117060937136,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 11.2782,
-        "known_amount_pct_of_total": 12.2078
+        "record_pct_of_total": 11.2586,
+        "known_amount_pct_of_total": 12.2024
       },
       {
         "bucket": "matured_after_2020_06_30",
         "records": 44531,
         "known_amount_cents": 169476469484,
         "unknown_amount_records": 0,
-        "record_pct_of_total": 7.7199,
-        "known_amount_pct_of_total": 17.674
+        "record_pct_of_total": 7.7064,
+        "known_amount_pct_of_total": 17.6662
       }
     ],
     "by_start_year": [
@@ -909,20 +1065,20 @@
       },
       {
         "year": 2016,
-        "records": 115822,
-        "known_amount_cents": 223311214903,
+        "records": 115824,
+        "known_amount_cents": 223334377213,
         "unknown_amount_records": 0
       },
       {
         "year": 2017,
-        "records": 278630,
-        "known_amount_cents": 465935557897,
+        "records": 279632,
+        "known_amount_cents": 466332669268,
         "unknown_amount_records": 2
       },
       {
         "year": 2018,
-        "records": 110126,
-        "known_amount_cents": 144445960006,
+        "records": 110127,
+        "known_amount_cents": 144446272756,
         "unknown_amount_records": 0
       },
       {
@@ -947,20 +1103,20 @@
       },
       {
         "year": 2016,
-        "records": 113119,
-        "known_amount_cents": 194813771976,
+        "records": 113121,
+        "known_amount_cents": 194836934286,
         "unknown_amount_records": 0
       },
       {
         "year": 2017,
-        "records": 249848,
-        "known_amount_cents": 286730086145,
+        "records": 250850,
+        "known_amount_cents": 287127197516,
         "unknown_amount_records": 2
       },
       {
         "year": 2018,
-        "records": 67697,
-        "known_amount_cents": 28577139860,
+        "records": 67698,
+        "known_amount_cents": 28577452610,
         "unknown_amount_records": 0
       },
       {
@@ -979,8 +1135,8 @@
       },
       {
         "term_months": 2,
-        "records": 4,
-        "known_amount_cents": 2357413,
+        "records": 5,
+        "known_amount_cents": 2598003,
         "unknown_amount_records": 0
       },
       {
@@ -991,8 +1147,8 @@
       },
       {
         "term_months": 6,
-        "records": 19226,
-        "known_amount_cents": 5005044120,
+        "records": 19332,
+        "known_amount_cents": 5027837057,
         "unknown_amount_records": 0
       },
       {
@@ -1003,38 +1159,38 @@
       },
       {
         "term_months": 9,
-        "records": 20815,
-        "known_amount_cents": 5256754366,
+        "records": 20855,
+        "known_amount_cents": 5267254795,
         "unknown_amount_records": 0
       },
       {
         "term_months": 10,
-        "records": 8949,
-        "known_amount_cents": 1766472177,
+        "records": 8961,
+        "known_amount_cents": 1768867617,
         "unknown_amount_records": 0
       },
       {
         "term_months": 12,
-        "records": 160679,
-        "known_amount_cents": 72332228015,
+        "records": 160938,
+        "known_amount_cents": 72407834798,
         "unknown_amount_records": 0
       },
       {
         "term_months": 15,
-        "records": 29731,
-        "known_amount_cents": 9976297031,
+        "records": 29780,
+        "known_amount_cents": 9992068318,
         "unknown_amount_records": 0
       },
       {
         "term_months": 18,
-        "records": 109102,
-        "known_amount_cents": 80788782453,
+        "records": 109398,
+        "known_amount_cents": 80907915305,
         "unknown_amount_records": 0
       },
       {
         "term_months": 24,
-        "records": 80468,
-        "known_amount_cents": 311338181195,
+        "records": 80710,
+        "known_amount_cents": 311512327308,
         "unknown_amount_records": 2
       },
       {
@@ -1049,17 +1205,49 @@
         "known_amount_cents": 15036379172,
         "unknown_amount_records": 0
       }
+    ],
+    "matured_by_2019_10_31_by_publication_year": [
+      {
+        "publication_year": 2020,
+        "records": 284,
+        "known_amount_cents": 116505709,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2021,
+        "records": 93730,
+        "known_amount_cents": 109967883093,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2022,
+        "records": 208079,
+        "known_amount_cents": 427307801228,
+        "unknown_amount_records": 0
+      },
+      {
+        "publication_year": 2023,
+        "records": 101638,
+        "known_amount_cents": 62945538379,
+        "unknown_amount_records": 2
+      },
+      {
+        "publication_year": 2024,
+        "records": 37964,
+        "known_amount_cents": 10977772347,
+        "unknown_amount_records": 0
+      }
     ]
   },
-  "cross_batch_exact_fingerprint_repeats": {
-    "keys": 41543,
-    "records_in_those_keys": 83089,
-    "extra_occurrences_beyond_first": 41546,
-    "known_amount_cents_of_extra_occurrences": 19521599585,
-    "unknown_amount_extra_occurrences": 0,
-    "max_batches_for_one_key": 3,
-    "max_occurrences_for_one_key": 3,
-    "extra_occurrence_amount_pct_of_all_known_amount": 1.9943,
+  "cross_batch_exact_fingerprint_sensitivity": {
+    "multi_batch_keys": 41543,
+    "records_in_multi_batch_keys": 83089,
+    "removed_cross_batch_occurrences": 41546,
+    "removed_known_amount_cents": 19521599585,
+    "removed_unknown_amount_occurrences": 0,
+    "max_distinct_batches_for_one_key": 3,
+    "max_total_occurrences_for_one_key": 3,
+    "removed_amount_pct_of_parseable_known_amount": 1.9943,
     "examples": [
       {
         "masked_name": "刘**",
@@ -1068,11 +1256,13 @@
         "loan_start": "2018-04-09",
         "term_months": "12",
         "amount_cents": 546660,
-        "occurrences": 2,
-        "batches": [
-          53,
-          63
-        ],
+        "batch_counts": {
+          "53": 1,
+          "63": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-04-09"
       },
       {
@@ -1082,11 +1272,13 @@
         "loan_start": "2018-05-03",
         "term_months": "12",
         "amount_cents": 546660,
-        "occurrences": 2,
-        "batches": [
-          55,
-          66
-        ],
+        "batch_counts": {
+          "55": 1,
+          "66": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-05-03"
       },
       {
@@ -1096,11 +1288,13 @@
         "loan_start": "2018-04-20",
         "term_months": "12",
         "amount_cents": 546660,
-        "occurrences": 2,
-        "batches": [
-          59,
-          73
-        ],
+        "batch_counts": {
+          "59": 1,
+          "73": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-04-20"
       },
       {
@@ -1110,11 +1304,13 @@
         "loan_start": "2018-04-20",
         "term_months": "12",
         "amount_cents": 57912,
-        "occurrences": 2,
-        "batches": [
-          63,
-          176
-        ],
+        "batch_counts": {
+          "63": 1,
+          "176": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-04-20"
       },
       {
@@ -1124,11 +1320,13 @@
         "loan_start": "2017-12-27",
         "term_months": "12",
         "amount_cents": 29391,
-        "occurrences": 2,
-        "batches": [
-          68,
-          173
-        ],
+        "batch_counts": {
+          "68": 1,
+          "173": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2018-12-27"
       },
       {
@@ -1138,11 +1336,13 @@
         "loan_start": "2017-12-28",
         "term_months": "36",
         "amount_cents": 4203,
-        "occurrences": 2,
-        "batches": [
-          70,
-          173
-        ],
+        "batch_counts": {
+          "70": 1,
+          "173": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2020-12-28"
       },
       {
@@ -1152,11 +1352,13 @@
         "loan_start": "2017-11-11",
         "term_months": "36",
         "amount_cents": 5658516,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2020-11-11"
       },
       {
@@ -1166,11 +1368,13 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 13118062,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       },
       {
@@ -1180,11 +1384,13 @@
         "loan_start": "2017-11-10",
         "term_months": "36",
         "amount_cents": 13598065,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2020-11-10"
       },
       {
@@ -1194,11 +1400,13 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 6738144,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       },
       {
@@ -1208,11 +1416,13 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 7810515,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       },
       {
@@ -1222,11 +1432,13 @@
         "loan_start": "2017-11-09",
         "term_months": "24",
         "amount_cents": 6885538,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-09"
       },
       {
@@ -1236,11 +1448,13 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 3150338,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       },
       {
@@ -1250,11 +1464,13 @@
         "loan_start": "2017-11-10",
         "term_months": "36",
         "amount_cents": 5625304,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2020-11-10"
       },
       {
@@ -1264,11 +1480,13 @@
         "loan_start": "2017-11-13",
         "term_months": "24",
         "amount_cents": 4298209,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-13"
       },
       {
@@ -1278,11 +1496,13 @@
         "loan_start": "2017-11-13",
         "term_months": "36",
         "amount_cents": 13330646,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2020-11-13"
       },
       {
@@ -1292,11 +1512,13 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 16058342,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       },
       {
@@ -1306,11 +1528,13 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 5809189,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       },
       {
@@ -1320,11 +1544,13 @@
         "loan_start": "2017-11-10",
         "term_months": "12",
         "amount_cents": 2159376,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2018-11-10"
       },
       {
@@ -1334,13 +1560,32 @@
         "loan_start": "2017-11-10",
         "term_months": "24",
         "amount_cents": 8177236,
-        "occurrences": 2,
-        "batches": [
-          71,
-          72
-        ],
+        "batch_counts": {
+          "71": 1,
+          "72": 1
+        },
+        "total_occurrences": 2,
+        "kept_occurrences": 1,
+        "removed_cross_batch_occurrences": 1,
         "computed_maturity": "2019-11-10"
       }
     ]
+  },
+  "maturity_to_publication_lag": {
+    "all_parseable_records": {
+      "min_days": -841,
+      "p25_days": 832.0,
+      "median_days": 1249.0,
+      "p75_days": 1764.0,
+      "max_days": 2889,
+      "published_before_final_contract_maturity_records": 12499
+    },
+    "matured_by_2019_10_31_subset": {
+      "min_days": 356,
+      "p25_days": 1103.0,
+      "median_days": 1480.0,
+      "p75_days": 1874.0,
+      "max_days": 2889
+    }
   }
 }
